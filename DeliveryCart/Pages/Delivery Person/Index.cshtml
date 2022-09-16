@@ -1,0 +1,110 @@
+@page
+@model Assignment_2.Pages.DeliveryPerson.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Available Orders</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].CustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].CustomerAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].OrderTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].Status)
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Order) {
+    @if (item.Status == "Pending")
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderTotal)
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.Status)
+            </th>
+            <td>
+                @* <a asp-page="./Details" asp-route-id="@item.OrderID">Accept</a> *@
+                <form method="post"> 
+                    <input type="hidden" asp-for="OrderToUpdate" value="@item.OrderID">
+                    <input type="submit" asp-page-handler="UpdateStatus" asp-route-id="@item.OrderID" value="Accept" class="btn btn-primary" />
+                </form>
+            </td>
+            <td>
+                <form method="post"> 
+                    <input type="hidden" asp-for="OrderToUpdate" value="@item.OrderID">
+                    <input type="submit" asp-page-handler="DeclineOrder" asp-route-id="@item.OrderID" value="Decline" class="btn btn-danger" />
+                </form> 
+            </td>
+        </tr>
+    }
+}
+    </tbody>
+</table>
+
+<h1>Accepted Orders</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].CustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].CustomerAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].OrderTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Order) {
+    @if ((item.Status != "Pending") && (item.Status != "Declined"))
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderTotal)
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.Status)
+            </th>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.OrderID">Change Status</a> |
+                <a asp-page="./Details" asp-route-id="@item.OrderID">Details</a>
+            </td>
+        </tr>
+    } 
+}
+    </tbody>
+</table>

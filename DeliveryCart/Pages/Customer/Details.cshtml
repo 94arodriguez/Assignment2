@@ -1,0 +1,29 @@
+@page
+@model Assignment_2.Pages.Customer.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt>
+            @Html.DisplayNameFor(model => model.Item.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Item.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Item.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Item.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
