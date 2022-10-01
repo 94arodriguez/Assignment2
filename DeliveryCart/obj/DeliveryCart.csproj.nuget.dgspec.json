@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alec_\\OneDrive - West Texas A and M University\\School\\Fall 2022\\Programming\\Assignment 2\\DeliveryCart\\DeliveryCart.csproj": {}
+    "C:\\Users\\alec_\\OneDrive - West Texas A and M University\\School\\Fall 2022\\Programming\\Assignment 2\\Assignment2\\DeliveryCart\\DeliveryCart.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alec_\\OneDrive - West Texas A and M University\\School\\Fall 2022\\Programming\\Assignment 2\\DeliveryCart\\DeliveryCart.csproj": {
+    "C:\\Users\\alec_\\OneDrive - West Texas A and M University\\School\\Fall 2022\\Programming\\Assignment 2\\Assignment2\\DeliveryCart\\DeliveryCart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alec_\\OneDrive - West Texas A and M University\\School\\Fall 2022\\Programming\\Assignment 2\\DeliveryCart\\DeliveryCart.csproj",
+        "projectUniqueName": "C:\\Users\\alec_\\OneDrive - West Texas A and M University\\School\\Fall 2022\\Programming\\Assignment 2\\Assignment2\\DeliveryCart\\DeliveryCart.csproj",
         "projectName": "DeliveryCart",
-        "projectPath": "C:\\Users\\alec_\\OneDrive - West Texas A and M University\\School\\Fall 2022\\Programming\\Assignment 2\\DeliveryCart\\DeliveryCart.csproj",
+        "projectPath": "C:\\Users\\alec_\\OneDrive - West Texas A and M University\\School\\Fall 2022\\Programming\\Assignment 2\\Assignment2\\DeliveryCart\\DeliveryCart.csproj",
         "packagesPath": "C:\\Users\\alec_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alec_\\OneDrive - West Texas A and M University\\School\\Fall 2022\\Programming\\Assignment 2\\DeliveryCart\\obj\\",
+        "outputPath": "C:\\Users\\alec_\\OneDrive - West Texas A and M University\\School\\Fall 2022\\Programming\\Assignment 2\\Assignment2\\DeliveryCart\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alec_\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -47,6 +47,18 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[6.0.9, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.4.0-preview-20220726-02, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.5, )"
             }
           },
           "imports": [

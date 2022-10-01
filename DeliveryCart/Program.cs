@@ -13,6 +13,7 @@ namespace Assignment_2
 {
     public class Program
     {
+
         public static void Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
@@ -31,6 +32,7 @@ namespace Assignment_2
             }
             
             host.Run();
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

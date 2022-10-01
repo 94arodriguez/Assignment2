@@ -11,6 +11,11 @@ namespace Assignment_2.Pages.DeliveryPerson
 {
     public class DetailsModel : PageModel
     {
+
+        public static int Add (int x, int y)
+        {
+            return x + y;
+        }
         private readonly Assignment_2.Models.DatabaseContext _context;
 
         public DetailsModel(Assignment_2.Models.DatabaseContext context)
